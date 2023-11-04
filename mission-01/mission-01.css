@@ -1,5 +1,4 @@
 :root{
-  margin: auto;
   --gray-800: #4E4E4E;
   --gray-500: #C4C4C4;
   --White: #FFF;
@@ -19,18 +18,26 @@ body{
   display: block;
   max-width: 502px;
   margin: auto;
+  
 }
 
 
 .honeylogo{
   text-align: center;
-  padding-top: 75px;
-  padding-bottom: 118px;
 }
 
-.honey-tea{
-  position: relative;
+/* .honeylogo{
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
+.honey-tea{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
   border: 1px solid var(--gray-500);
   background: var(--White);
   max-width: 502px;
@@ -39,29 +46,28 @@ body{
   padding-left: 28px;
 }
 
-.honeTea{
-  padding: 20px 20px 252px 28px;
-  margin-left: 24px;
-}
 
 
 .under-tea{
   display: flex;
-  flex-direction: row;
   text-align: center;
   font-style: normal;
   line-height: 150%;  
   height: 360px;
   width: inherit;
-  padding: auto;
 }
+
+p{margin: 0;
+  margin-top: 8px;
+  margin-bottom: 7px;}
 
 .handcream{
   position: relative;
-  border: 1px solid var(--blue-600);
+  border: 1px solid var(--gray-500);
   background: var(--White);
   margin: 10px;
   width: 230px;
+  padding-top: 14px;
 }
 
 .bori-tea{
@@ -70,11 +76,12 @@ body{
   background: var(--White);
   margin: 10px;
   width: 230px;
+  padding-top: 14px;
 }
 
 
 
-
+/* 키프레임으로 애니메이션을 주려다가 display: none으로 처리해서 실패하고, hover로 도전 */
 @keyframes fadeEffect{
   0% {
     background: rgba(0, 0, 0, 0.20); 
@@ -86,43 +93,124 @@ body{
   }
   100% {
     background: var(--blue-600);
-    padding: 12px 18px 13px 20px;
     justify-content: center;
     align-items: center;
     gap: 16px;
     border: 0;
+    width: 87px;
   }
 }
 
+@keyframes boxfadeEffect{
+  0% {
+    border: 1px solid var(--gray-500);
+  }
+   100% {
+     
+     border: 1px solid var(--blue-600);
+  }
+}
+ 
 .btn1{ 
   position: absolute; 
+  display: flex;
+  align-items: center;
+  text-align: center;
   width: 42px;
   height: 42px;
   flex-shrink: 0;
   background: rgba(0, 0, 0, 0.20);
   color: rgba(0, 0, 0, 0);
   border: 0;
-}
-
-.btn2{
   bottom: 20px;
   left: 20px;
 }
 
-.btn3{
-  bottom: 20px;
-  left: 20px;
-
-}
 
 .btn1:hover{
   display: inline-flex;
-  padding: 12px 18px 13px 20px;
   justify-content: center;
   align-items: center;
   gap: 16px;
   background: var(--blue-600);
   color: #FFF;
   animation-name: fadeEffect;
-  animation-duration: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+ } 
+
+.honey-tea:hover, .handcream:hover, .bori-tea:hover{
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: boxfadeEffect;
 }
+
+
+
+/* span 조절해서 늘이기
+/* .btn1 {
+  position: absolute;
+  padding: 12px 18px 13px 20px;
+  height: 42px;
+  flex-basis: 42px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 0;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .5s;
+}
+
+.btn1 span {
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+.btn1:hover {
+  background: var(--blue-600);
+  gap: 16px;
+}
+
+.btn1:hover span {
+  opacity: 1;
+  visibility: visible;
+  width: 47px;
+} */
+
+/* 버튼 자체 길이 조정 
+.btn1 {
+  position: absolute;
+  height: 42px;
+  text-align: center;
+  width: 42px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 0;
+  bottom: 20px;
+  left: 20px;
+  overflow: hidden;
+  transition: all .5s;
+  color: #fff;
+}
+
+.btn1 span {
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  top: 50%;
+  left: -120%;
+  transform: translateY(-50%);
+}
+
+.btn1:hover {
+  text-align: right;
+  width: 80px;
+  background: var(--blue-600);
+}
+
+.btn1:hover span {
+  left: 6px;
+} */
