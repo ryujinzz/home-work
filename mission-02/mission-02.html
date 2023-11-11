@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDIYA LOG IN</title>
+  <link rel="stylesheet" href="mission-02.css" />
+</head>
+
+<body>
+  <section class="login-wrapper">
+    <div class="login-headline">
+      <h1>로그인</h1>
+      <h5>Welcome, Ediya Coffee</h5>
+      <h6>이디야 커피에 오신 것을 환영합니다.</h6>
+    </div>
+    <form method="post" class="login-form">
+      <div class="email-wrap">
+        <input type="text" name="이메일" class="email" />
+      </div>
+      <!-- <Error display={error ? 1 : 0}>
+        이메일 입력 방법이 잘못되었습니다. (예: user@domain.io)
+      </Error> -->
+      <div class="psw-wrap">
+        <input type="checkbox" class="psw-ch is-active" />
+        <input type="password" name="비밀번호" class="psw" />
+      </div>
+      <!-- <Error display={error ? 1 : 0}>
+        패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.
+      </Error> -->
+      <label class="check-save">
+        <input type="checkbox">이메일 저장
+      </label>
+
+      <div class="sign">
+        <button type="submit" class="login">
+          로그인
+          <!-- <img src="/image/blue-arrow.svg" alt="파란 화살표" /> -->
+        </button>
+        <!-- <img src="/image/로딩 스피너.svg" alt="로그인 로딩 스피너" /> -->
+
+        <a class="signin-btn" href="">회원가입
+          <!-- <img src="/image/white-arrow.svg" alt="하얀 화살표" /> -->
+        </a>
+    </form>
+    </div>
+
+  </section>
+</body>
+
+</html>
