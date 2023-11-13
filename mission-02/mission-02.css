@@ -12,8 +12,8 @@
 
 .login-wrapper{
   background-image: url('./image/coffe-bin.png');
-  max-width: 1440px;
-  height: 750px;
+  max-width: 90em;
+  height: 46.875em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -27,7 +27,7 @@
   font-family: SpoqaHanSans;
   font-style: normal;
   line-height: normal;
-  margin-bottom: 100px ;
+  margin-bottom: 6.25em ;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -41,15 +41,15 @@
   padding-bottom: 1em;
 }
 
-.login-headline h5{
-  width: 187px;
+.welcome{
+  width: 11.69em;
   text-align: center;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: -0.36px;
 }
 
-.login-headline h6{
+.welcome2{
   width: 175px;
   font-size: 12px;
   font-weight: 400;
@@ -59,46 +59,71 @@
 .login-form{
   display: flex;
   flex-flow: column;
-  width: 540px;
+
+  width: 33.75em;
 }
 
 
 .email-wrap, .psw-wrap{
   border-bottom: 1px solid var(--unnamed);
-  margin: 1em 0;
-}
-
-.email-wrap:valid{
+  margin: 1em 0 ;
   
 }
 
-.psw-wrap:valid{
-  border: 1px solid var(--1);
+.email-wrap{
+
+  font-size: 0.8rem;
+  transition: font-size 0.3s ease ;
 }
+
+.email-wrap:hover{
+  transition: scale(2) translateY(16);
+  font-size: 1rem;
+}
+
+
 
 .email{
   background-image : url('./image/check-circle.svg');
   background-repeat : no-repeat;
-  background-size: 16px;
+  background-size: 1em;
   background-position: right;
-  width: 540px;
-  height: 30px;
+  width: 40em;
+  height: 1.875em;
 }
 
-/* .psw-ch{
+.psw-ch{
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+.psw-wrap{
+  position: relative;
+}
+
+.psw-ch[type="checkbox"]{
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  background: url('./image/eye.svg') right no-repeat;
-} */
+  position: absolute;
+  right: 2em;
+  top: 1.8em;
+  cursor: pointer;
+  width: 1.2em;
+  height: 1em;
+  background: url('./image/eye.svg') no-repeat;
+}
+
+.psw-ch[type="checkbox"]:checked{
+  background-image: url('./image/eye-close.svg');
+}
 
 .psw{
-  background-image: url('./image/eye.svg'), url('./image/eye-close.svg'), url('./image/alert.svg');
+  background-image: url('./image/alert.svg');
   background-repeat: no-repeat;
-  background-size: 16px;
+  background-size: 1em;
   background-position: right;
-  width: 540px;
-  height: 30px;
+  width: 40em;
+  height: 1.875em;
   
 }
 
