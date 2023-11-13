@@ -1,3 +1,8 @@
+.header{
+  display: flex;
+}
+
+
 
 .login-btn{
   appearance: none;

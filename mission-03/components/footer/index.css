@@ -1,0 +1,42 @@
+.footer{
+  max-width: 80em;
+  margin: 4em 12.5em;
+  font-family: SpoqaHanSans;
+  line-height: 150%; 
+}
+.footer p{
+  color: var(--gray-200, #C8C8C8);
+  font-size: 20px;
+  letter-spacing: -0.01px;
+
+}
+.table {
+  margin: 2em 0;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 2em;
+}
+
+.footer-under-wrapper{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.footer-under-wrapper span{
+  display: block;
+  margin-top: 2em;
+  color: var(--gray-200, #C8C8C8);
+  font-size: 20px;
+  letter-spacing: -0.01px;
+}
+
+.footer-under-wrapper p{
+  display: block;
+  margin: 1em 0;
+  color: var(--gray-400, #919191);
+  font-family: SpoqaHanSans;
+  font-size: 1rem;
+  letter-spacing: -0.008px;
+}
