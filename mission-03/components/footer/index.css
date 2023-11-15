@@ -1,17 +1,25 @@
 .footer{
-  max-width: 80em;
-  margin: 4em 12.5em;
+  /* background-color: black; */
+  max-width: 1440px;
+  padding: 4em 12.5em;
   font-family: SpoqaHanSans;
-  line-height: 150%; 
+  line-height: 1.5; 
+  border-top: 1px solid var(--gray-200, #C8C8C8);
+  white-space: nowrap;
 }
-.footer p{
+
+.footer p, address{
   color: var(--gray-200, #C8C8C8);
   font-size: 20px;
   letter-spacing: -0.01px;
-
 }
+
+.footer em, address{
+  font-style: initial;
+}
+
 .table {
-  margin: 3em 0;
+  margin: 3em auto;
   text-decoration: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -21,27 +29,57 @@
   color: var(--gray-300, #ACACAC);
   font-size: 1em;
   font-weight: 400;
-  line-height: 120%; /* 19.2px */
+  line-height: 1.2; /* 19.2px */
+}
+
+.footer-under-wrapper span{
+  display: block;
+  color: var(--gray-200, #C8C8C8);
+  font-size: 20px;
+  letter-spacing: -0.01px;
+
 }
 
 .footer-under-wrapper{
   display: flex;
   flex-flow: column nowrap;
-}
-
-.footer-under-wrapper span{
   display: block;
-  margin-top: 2em;
-  color: var(--gray-200, #C8C8C8);
-  font-size: 20px;
-  letter-spacing: -0.01px;
-}
-
-.footer-under-wrapper p{
-  display: block;
-  margin: 1em 0;
+  margin: 3em 0;
   color: var(--gray-400, #919191);
   font-family: SpoqaHanSans;
   font-size: 1rem;
   letter-spacing: -0.008px;
 }
+
+.footer-under-wrapper span{
+  margin-top: 2em; 
+}
+
+@media (max-width: 768px){
+
+  .table{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  }
+
+  .footer-under-wrapper p, em{
+    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    
+  }
+
+  address{
+    white-space: wrap;
+  }
+
+}
+
+/* @container (max-width: 895px){
+
+.footer em, address{
+  white-space: wrap;
+
+}
+} */

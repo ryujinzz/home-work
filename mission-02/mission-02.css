@@ -34,7 +34,7 @@
   justify-content: center;
 }
 
-.login-headline h1{
+.login-headline h2{
   font-size: 36px;
   font-weight: 300;
   letter-spacing: -0.72px;
@@ -70,13 +70,12 @@
   
 }
 
-.email-wrap{
-
+.email-wrap, .psw-wrap{
   font-size: 0.8rem;
   transition: font-size 0.3s ease ;
 }
 
-.email-wrap:hover{
+.email-wrap:hover, .psw-wrap:hover{
   transition: scale(2) translateY(16);
   font-size: 1rem;
 }
@@ -90,12 +89,19 @@
   background-position: right;
   width: 40em;
   height: 1.875em;
+  user-select: none;
+  
 }
 
+
+
 .psw-ch{
+  /* 아예 스타일을 전부 없애주는 기능 */
   appearance: none;
+
   border: none;
   outline: none;
+  user-select: none;
 }
 
 .psw-wrap{
@@ -128,6 +134,8 @@
 }
 
 .check-save{
+  display: flex;
+  align-items: center;
   margin-bottom: 4em;
   font-size: 12px;
   appearance: none;
