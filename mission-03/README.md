@@ -32,6 +32,7 @@ mission-03.html로 정했고, 헤더 부분도 여기에서 작업하기로 했�
 
 뷰포트 768px 기준으로 나뉠 때, 어떤 방식으로 바뀌어야 하는지 직접 그림을 그려서 고려했다. 
 
+
 ### 4. 768px 기준 동작캡쳐
 
 - 768px 이상
@@ -48,9 +49,37 @@ mission-03.html로 정했고, 헤더 부분도 여기에서 작업하기로 했�
 
 ### 5. 아쉬웠던 점
 
-- select 태그를 커스텀하는 방법을 도저히 찾을 수가 없어서 background-image를 2개 주고 배치하는 방식을 선택했지만 다른 방법은 어떠한 것이 있는지 궁금하다. 
+- select 태그를 커스텀하는 방법을 도저히 찾을 수가 없어서 background-image를 2개 주고 배치하는 방식을 선택했지만 다른 방법은 어떠한 것이 있는지 궁금하다.
 
-- 마지막 푸터에서 address태그 안에서 wrap이 동작하는 부분을 컨테이너 쿼리로 해보고 싶었는데 마음대로 되지 않아서 속상했다. 그치만 포기하지 않고 미디어쿼리를 추가해서 구현해보았다. 
+```
+  select{
+    appearance: none;
+    background: transparent;
+    border: 0 solid transparent;
+    color: #757575;
+    border-radius: 2px;
+    border: 1px solid var(--gray-500, #757575);
+    padding: 10px 34px;
+    background: url('/images/global.svg'), url('/images/down-fill.svg');
+    background-position: 10% 45%, 90% 45%;
+    background-repeat: no-repeat;
+    margin-right: 24px;
+      }
+```
+
+- 마지막 푸터에서 address태그 안에서 wrap이 동작하는 부분을 컨테이너 쿼리로 해보고 싶었는데 마음대로 되지 않아서 속상했다. 그치만 포기하지 않고 미디어쿼리를 추가해서 구현해보았다.
+
+  ```
+
+@media (max-width: 1090px){
+
+  .address em{ 
+    display: inline-block;
+    white-space: wrap;
+
+  }
+}
+  ```
 
 - 피그마에서 보는 것과 추출하는 값이 눈으로 보는 것과 차이가 있어서, 눈으로 보는 기준을 우선시 했지만 정밀한 값을 하나하나 고려하는 것이 너무 힘들었다. 
 
