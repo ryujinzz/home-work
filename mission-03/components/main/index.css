@@ -7,6 +7,8 @@ section{
 .main-pwapper{
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   width: 32.375em;
   font-weight: 700;
   color: white;
@@ -49,7 +51,9 @@ section{
 
 .email input{
   width: 33.75em;
+  height: 60px;
   padding: 18px 20px;
+  border: 0;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -58,8 +62,10 @@ section{
 .free-btn{
   display: flex;
   flex-flow: column nowrap;
-  background-position: 95% 50%;
-  padding: 0.8em 2em 0.8em 1em ;
+  align-items: center;
+  background-position: 90% 50%;
+  height: 60px;
+  padding: 17px 52px 17px 20px ;
   appearance: none;
   outline: 0;
   border: 0;
@@ -80,4 +86,59 @@ section{
   line-height: 150%; /* 24px */
   letter-spacing: -0.008px;
   margin-top: 28px;
+}
+
+
+@media (max-width: 768px){
+  .span1{
+  font-size: 34px;
+  transition: all 400ms ease;
+  }
+
+  .span2{
+  font-size: 18px;
+  transition: all 400ms ease;
+  }
+
+  .main-pwapper p{
+    font-size: 14px;
+    transition: all 400ms ease;
+  }
+
+  .email{
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto 0;
+    width: 245px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .email input{
+    width: 205px;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    flex-shrink: 0;
+  }
+  
+  .free-btn{
+    height: 40px;
+    width: 160px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 15px 52px 15px 20px;
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+
+  .span3{
+    font-size: 12px;
+    transition: all 400ms ease;
+  }
 }
