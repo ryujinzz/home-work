@@ -56,6 +56,13 @@
 }
 
 @media (max-width: 768px){
+    @container (max-width: 1090px){
+  
+      address{
+      white-space: wrap;
+  
+    }
+    }
 
   .table{
   display: grid;
@@ -74,12 +81,5 @@
     white-space: wrap;
   }
 
-}
-
-/* @container (max-width: 895px){
-
-.footer em, address{
-  white-space: wrap;
 
 }
-} */
